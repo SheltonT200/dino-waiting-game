@@ -881,7 +881,7 @@ var x=150,z=0.003,c=1.01,cx=1.02;
         onVisibilityChange: function (e) {
             if (document.hidden || document.webkitHidden || e.type == 'blur' ||
                 document.visibilityState != 'visible') {
-                this.stop();
+                this.gameOver();
             } else if (!this.crashed) {
                 this.tRex.reset();
                 this.play();
@@ -2766,9 +2766,3 @@ function onDocumentLoad() {
 }
 
 document.addEventListener('DOMContentLoaded', onDocumentLoad);
-function not_active(e){
-if (document.hidden || document.webkitHidden || document.visibilityState != 'visible' || Runner().paused===true){
-  Runner().gameOver()
-  Runner().paused=false
-  }}
-setInterval('not_active()')
