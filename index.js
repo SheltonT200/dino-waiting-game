@@ -120,13 +120,13 @@ var x=150,z=0.003,c=1.01,cx=1.02;
         MAX_BLINK_COUNT: 300,
         MAX_CLOUDS: 600,
         MAX_OBSTACLE_LENGTH: 30,
-        MAX_OBSTACLE_DUPLICATION: 2,
+        MAX_OBSTACLE_DUPLICATION: 200,
         MAX_SPEED: 10,
         MIN_JUMP_HEIGHT: 35,
         MOBILE_SPEED_COEFFICIENT: 1.2,
         RESOURCE_TEMPLATE_ID: 'audio-resources',
         SPEED: 3,
-        SPEED_DROP_COEFFICIENT: 3,
+        SPEED_DROP_COEFFICIENT: 3.5,
         ARCADE_MODE_INITIAL_TOP_POSITION: 35,
         ARCADE_MODE_TOP_POSITION_PERCENT: 0.1
     };
@@ -2766,8 +2766,8 @@ function onDocumentLoad() {
 }
 
 document.addEventListener('DOMContentLoaded', onDocumentLoad);
-function not_active(){
-if (Runner().paused===true){
+function not_active(e){
+if (document.hidden || document.webkitHidden || e.type == 'blur' || document.visibilityState != 'visible'){
   Runner().gameOver()
   Runner().paused=false
   }}
