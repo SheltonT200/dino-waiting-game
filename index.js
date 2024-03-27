@@ -2758,11 +2758,10 @@ function CollisionBox(x, y, w, h) {
                 this.dimensions.WIDTH));
         }
     };
-})();
-
 
 function onDocumentLoad() {
     new Runner('.interstitial-wrapper');
 }
 
 document.addEventListener('DOMContentLoaded', onDocumentLoad);
+})();
