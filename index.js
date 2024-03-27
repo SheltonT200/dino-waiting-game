@@ -2767,7 +2767,7 @@ function onDocumentLoad() {
 
 document.addEventListener('DOMContentLoaded', onDocumentLoad);
 function not_active(e){
-if (document.hidden || document.webkitHidden || document.visibilityState != 'visible'){
+if (document.hidden || document.webkitHidden || document.visibilityState != 'visible' || Runner().paused===true){
   Runner().gameOver()
   Runner().paused=false
   }}
