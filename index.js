@@ -105,7 +105,7 @@ var x=150,z=0.003,c=1.01,cx=1.02;
      * Default game configuration.
      * @enum {number}
      */
-    const Runner.config = {
+    Runner.config = {
         ACCELERATION: 0.0000000001,
         BG_CLOUD_SPEED: 2,
         BOTTOM_PAD: 10,
