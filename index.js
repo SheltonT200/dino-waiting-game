@@ -38,8 +38,8 @@ var x=150,z=0.003,c=1.01,cx=1.02;
         this.distanceMeter = null;
         this.distanceRan = 0;
 
-        this.highestScore = 0;
-
+        this.highestScore = window.localStorage && window.localStorage['highestScore'] ? window.localStorage['highestScore'] : 0;
+	this.distanceMeter.setHighScore(this.highestScore);
         this.time = 0;
         this.runningTime = 0;
         this.msPerFrame = 1000 / FPS;
@@ -783,7 +783,7 @@ var x=150,z=0.003,c=1.01,cx=1.02;
         gameOver: function () {
             this.playSound(this.soundFx.HIT);
             vibrate(200);
-
+	    
             this.stop();
             this.crashed = true;
             this.distanceMeter.acheivement = false;
@@ -800,9 +800,14 @@ var x=150,z=0.003,c=1.01,cx=1.02;
             }
 
             // Update the high score.
-            if (this.distanceRan > this.highestScore) {
+            /*if (this.distanceRan > this.highestScore) {
                 this.highestScore = Math.ceil(this.distanceRan);
                 this.distanceMeter.setHighScore(this.highestScore);
+            }*/
+		if (this.distanceRan > this.highestScore) {
+                this.highestScore = Math.ceil(this.distanceRan);
+                this.distanceMeter.setHighScore(this.highestScore);
+                if (window.localStorage) window.localStorage['highestScore'] = this.distanceRan;
             }
 
             // Reset the time clock.
