@@ -504,7 +504,7 @@ var x=150,z=0.003,c=1.01,cx=1.02;
          * Update the game status to started.
          */
         startGame: function () {
-		Runner().distanceMeter.setHighScore(Runner().highestScore);
+		Runner().distanceMeter.setHighScore(btoa(Runner().highestScore));
             this.setArcadeMode();
             this.runningTime = 0;
             this.playingIntro = false;
