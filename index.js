@@ -807,7 +807,7 @@ var x=150,z=0.003,c=1.01,cx=1.02;
 		if (this.distanceRan > this.highestScore) {
                 this.highestScore = Math.ceil(this.distanceRan);
                 this.distanceMeter.setHighScore(this.highestScore);
-                if (window.localStorage) window.localStorage['highestScore'] = this.distanceRan;
+                if (window.localStorage) window.localStorage['highestScore'] = btoa(this.distanceRan);
             }
 
             // Reset the time clock.
