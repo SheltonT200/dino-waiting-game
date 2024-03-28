@@ -39,7 +39,6 @@ var x=150,z=0.003,c=1.01,cx=1.02;
         this.distanceRan = 0;
 
         this.highestScore = window.localStorage && window.localStorage['highestScore'] ? window.localStorage['highestScore'] : 0;
-	this.distanceMeter.setHighScore(this.highestScore);
         this.time = 0;
         this.runningTime = 0;
         this.msPerFrame = 1000 / FPS;
@@ -2762,6 +2761,7 @@ function CollisionBox(x, y, w, h) {
             this.clouds.push(new Cloud(this.canvas, this.spritePos.CLOUD,
                 this.dimensions.WIDTH));
         }
+    this.distanceMeter.setHighScore(this.highestScore);
     };
 
 function onDocumentLoad() {
