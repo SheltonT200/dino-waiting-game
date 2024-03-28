@@ -2761,7 +2761,7 @@ function CollisionBox(x, y, w, h) {
             this.clouds.push(new Cloud(this.canvas, this.spritePos.CLOUD,
                 this.dimensions.WIDTH));
         }
-    this.distanceMeter.setHighScore(this.highestScore);
+    Runner.distanceMeter.setHighScore(this.highestScore);
     };
 
 function onDocumentLoad() {
