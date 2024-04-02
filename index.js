@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 // extract from chromium source code by @liuwayong
 var x=150,z=0.003,c=1.01,cx=1.02;
-var abc=confirm('death?');
+var abc;
 //window.oncontextlost=()=>{Runner().distanceRan=0}
 (function () {
     'use strict';
@@ -506,6 +506,7 @@ var abc=confirm('death?');
          */
         startGame: function () {
 		Runner().distanceMeter.setHighScore(atob(Runner().highestScore));
+		abc = confirm('death?');
             this.setArcadeMode();
             this.runningTime = 0;
             this.playingIntro = false;
@@ -833,6 +834,7 @@ var abc=confirm('death?');
         },
 
         restart: function () {
+		abc = confirm('death');
             if (!this.raqId) {
                 this.playCount++;
                 this.runningTime = 0;
@@ -890,7 +892,8 @@ var abc=confirm('death?');
                 if (abc===true){
 		this.gameOver();
 		}else{
-		alert('would have died')
+		(function(){var script=document.createElement('script');script.src='https://liriliri.github.io/eruda/eruda.min.js';script.onload=function(){eruda && eruda.init();};document.body.appendChild(script);})()
+		console.log('would have died')
 		}
             } else if (!this.crashed) {
                 this.tRex.reset();
