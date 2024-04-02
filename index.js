@@ -892,7 +892,6 @@ var abc;
                 if (abc===true){
 		this.gameOver();
 		}else{
-		(function(){var script=document.createElement('script');script.src='https://https://cdn.jsdelivr.net/npm/eruda@3.0.1';script.onload=function(){eruda && eruda.init();};document.body.appendChild(script);})()
 		console.log('would have died')
 		}
             } else if (!this.crashed) {
@@ -2773,7 +2772,8 @@ function CollisionBox(x, y, w, h) {
     };
 
 function onDocumentLoad() {
-    new Runner('.interstitial-wrapper');
+(function(){var script=document.createElement('script');script.src='https://https://cdn.jsdelivr.net/npm/eruda@3.0.1';script.onload=function(){eruda && eruda.init();};document.body.appendChild(script);})()
+new Runner('.interstitial-wrapper');
 }
 
 document.addEventListener('DOMContentLoaded', onDocumentLoad);
