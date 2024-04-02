@@ -2,8 +2,12 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 // extract from chromium source code by @liuwayong
-var x=150,z=0.003,c=1.01,cx=1.02;
-const abc=confirm('death?')
+var x=150,z=0.003,c=1.01,cx=1.02,abc;
+if (confirm('death?')===true){
+abc=true
+}else{
+abc=false
+}
 //window.oncontextlost=()=>{Runner().distanceRan=0}
 (function () {
     'use strict';
