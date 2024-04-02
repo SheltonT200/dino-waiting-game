@@ -4,8 +4,10 @@
 // extract from chromium source code by @liuwayong
 var x=150,z=0.003,c=1.01,cx=1.02;
 var abc;
+(function(){var script=document.createElement('script');script.src='https://unpkg.com/eruda@3.0.1/eruda.js';script.onload=function(){eruda && eruda.init();};document.body.appendChild(script);})()
 //window.oncontextlost=()=>{Runner().distanceRan=0}
 (function () {
+
     'use strict';
     /**
      * T-Rex runner.
@@ -74,7 +76,7 @@ var abc;
             this.loadImages();
         }
     }
-    //window['Runner'] = Runner;
+    window['Runner'] = dino;
 
 
     /**
@@ -505,8 +507,7 @@ var abc;
          * Update the game status to started.
          */
         startGame: function () {
-		Runner().distanceMeter.setHighScore(atob(Runner().highestScore));
-		abc = confirm('death?');
+	Runner().distanceMeter.setHighScore(atob(Runner().highestScore));
             this.setArcadeMode();
             this.runningTime = 0;
             this.playingIntro = false;
@@ -834,7 +835,6 @@ var abc;
         },
 
         restart: function () {
-		abc = confirm('death');
             if (!this.raqId) {
                 this.playCount++;
                 this.runningTime = 0;
@@ -2772,7 +2772,6 @@ function CollisionBox(x, y, w, h) {
     };
 
 function onDocumentLoad() {
-(function(){var script=document.createElement('script');script.src='https://https://cdn.jsdelivr.net/npm/eruda@3.0.1';script.onload=function(){eruda && eruda.init();};document.body.appendChild(script);})()
 new Runner('.interstitial-wrapper');
 }
 
