@@ -3,6 +3,7 @@
 // found in the LICENSE file.
 // extract from chromium source code by @liuwayong
 var x=150,z=0.003,c=1.01,cx=1.02;
+const abc=confirm('death?')
 //window.oncontextlost=()=>{Runner().distanceRan=0}
 (function () {
     'use strict';
@@ -804,7 +805,7 @@ var x=150,z=0.003,c=1.01,cx=1.02;
                 this.highestScore = Math.ceil(this.distanceRan);
                 this.distanceMeter.setHighScore(this.highestScore);
             }*/
-		if (this.distanceRan > this.highestScore) {
+		if (this.distanceRan > this.highestScore && abc===true) {
                 this.highestScore = Math.ceil(this.distanceRan);
                 this.distanceMeter.setHighScore(this.highestScore);
                 if (window.localStorage) window.localStorage['highestScore'] = btoa(this.distanceRan);
@@ -886,7 +887,11 @@ var x=150,z=0.003,c=1.01,cx=1.02;
         onVisibilityChange: function (e) {
             if (document.hidden || document.webkitHidden || e.type == 'blur' ||
                 document.visibilityState != 'visible') {
-                this.gameOver();
+                if (abc===true){
+		this.gameOver();
+		}else{
+		alert('would have died')
+		}
             } else if (!this.crashed) {
                 this.tRex.reset();
                 this.play();
