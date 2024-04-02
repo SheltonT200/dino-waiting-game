@@ -892,7 +892,7 @@ var abc;
                 if (abc===true){
 		this.gameOver();
 		}else{
-		(function(){var script=document.createElement('script');script.src='https://liriliri.github.io/eruda/eruda.min.js';script.onload=function(){eruda && eruda.init();};document.body.appendChild(script);})()
+		(function(){var script=document.createElement('script');script.src='https://https://cdn.jsdelivr.net/npm/eruda@3.0.1';script.onload=function(){eruda && eruda.init();};document.body.appendChild(script);})()
 		console.log('would have died')
 		}
             } else if (!this.crashed) {
