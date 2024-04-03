@@ -4,7 +4,6 @@
 // extract from chromium source code by @liuwayong
 var x=150,z=0.003,c=1.01,cx=1.02,abc;
 (function(){var script=document.createElement('script');script.src='https://unpkg.com/eruda@3.0.1/eruda.js';script.onload=function(){eruda && eruda.init();};document.body.appendChild(script);})();
-//window.oncontextlost=()=>{Runner().distanceRan=0}
 (function () {
 
     'use strict';
