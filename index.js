@@ -78,7 +78,11 @@ var x=150,z=0.003,c=1.01,cx=1.02,abc;
 window['restart']=Runner().restart;
 window['play']=Runner().play;
 */
-window['time_spent']=function time(){return 'mins'+Math.floor((Runner().distanceRan*(Runner().distanceMeter.config.COEFFICIENT))/60)+"secs"+Math.floor(Runner().distanceRan*(Runner().distanceMeter.config.COEFFICIENT)-(Runner().distanceRan*(Runner().distanceMeter.config.COEFFICIENT))/60)}
+window['time_spent']=function time(){
+var min = Math.floor((Runner().distanceRan*(Runner().distanceMeter.config.COEFFICIENT))/60)
+var sec = Math.floor((Runner().distanceRan*(Runner().distanceMeter.config.COEFFICIENT)))-(min*60)
+return 'mins '+min+" secs "+sec
+}
 
 
     /**
