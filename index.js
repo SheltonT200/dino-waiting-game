@@ -74,7 +74,7 @@ var x=150,z=0.003,c=1.01,cx=1.02,abc;
             this.loadImages();
         }
     }
-    window['Runner'] = dino;
+    window['ΠΔΠ'] = Runner;
 
 
     /**
