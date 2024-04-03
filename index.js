@@ -74,9 +74,10 @@ var x=150,z=0.003,c=1.01,cx=1.02,abc;
             this.loadImages();
         }
     }
-window['end']=Runner().gameOver;
+/*window['end']=Runner().gameOver;
 window['restart']=Runner().restart;
 window['play']=Runner().play;
+*/
 window['time_spent']=function time(){return 'mins'+Math.floor((Runner().distanceRan*(Runner().distanceMeter.config.COEFFICIENT))/60)+"secs"+Math.floor(Runner().distanceRan*(Runner().distanceMeter.config.COEFFICIENT)-(Runner().distanceRan*(Runner().distanceMeter.config.COEFFICIENT))/60)}
 
 
